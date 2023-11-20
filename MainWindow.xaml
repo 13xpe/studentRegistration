@@ -1,0 +1,45 @@
+﻿<Window x:Class="Week4Student.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Week4Student"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="600" Width="900">
+    <Grid Background="#FFE0C6C6">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="122"/>
+            <RowDefinition Height="316"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="118*"/>
+            <ColumnDefinition Width="349*"/>
+            <ColumnDefinition Width="333"/>
+            <ColumnDefinition Width="100"/>
+        </Grid.ColumnDefinitions>
+        <Label Grid.Column="1" Content="ABC COLLEGE STUDENT REGISTRATION" HorizontalAlignment="Left" VerticalAlignment="Top" Height="32" Width="280" FontWeight="Bold" FontSize="14" Margin="16,31,0,0"/>
+        <Canvas Grid.RowSpan="3" Margin="45,90,76,32" Grid.ColumnSpan="2">
+            <Label Content="Student Name" Canvas.Left="90" Canvas.Top="43" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" FontSize="14"/>
+            <TextBox x:Name="name" Canvas.Left="196" TextWrapping="Wrap" Canvas.Top="48" Width="164" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <Label Content="Student No" Canvas.Left="90" Canvas.Top="93" Width="100" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <TextBox x:Name="stdid" Canvas.Left="196" TextWrapping="Wrap" Canvas.Top="98" Width="164" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <Label Content="Student Email" Canvas.Left="90" Canvas.Top="145" Width="100" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <TextBox x:Name="email" Canvas.Left="196" TextWrapping="Wrap" Canvas.Top="150" Width="164" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <Label Content="Department" Canvas.Left="90" Canvas.Top="198" Width="100" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <TextBox x:Name="dept" Canvas.Left="196" TextWrapping="Wrap" Canvas.Top="203" Width="164" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <Label Content="Registeration Year" Canvas.Left="90" Canvas.Top="250" Width="128" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <TextBox x:Name="regYr" Canvas.Left="230" TextWrapping="Wrap" Canvas.Top="255" Width="130" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <Label Content="Search ID" Canvas.Left="462" Canvas.Top="-60" Width="70" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+            <TextBox x:Name="search" Canvas.Left="536" TextWrapping="Wrap" Canvas.Top="-55" Width="130" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+            <DataGrid x:Name="dataGrid" Height="121" Width="624"  HorizontalAlignment="Left" VerticalAlignment="Center" Canvas.Left="91" Canvas.Top="336" Background="White"/>
+        </Canvas>
+        <StackPanel Grid.Column="1" Grid.ColumnSpan="2" Margin="348,100,43,22" Grid.RowSpan="2">
+            <Button Content="Insert Student" Background="#FFFEFFBE" Click="Button_Click" FontSize="16" Height="60"/>
+            <Button Content="Select Student" FontSize="16" Height="60" Background="#FFCCD7F6" Click="Button_Click_2"/>
+            <Button Content="Update Student" FontSize="16" Height="60" Background="#FFCCF6D3"/>
+            <Button Content="Delete Student" FontSize="16" Height="60" Background="#FFF6CCF5"/>
+            <Button Content="Show All Students" FontSize="16" Height="60" Background="#FFF6DECC" Click="Button_Click_1"/>
+        </StackPanel>
+    </Grid>
+</Window>
